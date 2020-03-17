@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="1350cec4-90e5-42fb-95f4-19e029401ed5" 
+        solutionId="1350cec4-90e5-42fb-95f4-19e029401ed5" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Roda_de_Cura"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="6fefcd11-5cfd-4358-aa6c-594aca0af610" />
+  </features>
+</package>

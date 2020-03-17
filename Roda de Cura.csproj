@@ -1,0 +1,135 @@
+﻿<Project ToolsVersion="16.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5861576F-ED1B-4AD3-AAAC-C91FE5186768}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Roda_de_Cura</RootNamespace>
+    <AssemblyName>Roda de Cura</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{5f449dd4-6e33-404b-91c0-6009c7d4f82e}</AppFeaturePartId>
+    <WspPartId>{274fcbbc-8d4f-4145-99d9-7a7310ea6ed8}</WspPartId>
+    <WorkflowPartId>{ba4da7b1-8a32-44bf-885b-f6f40c681f9c}</WorkflowPartId>
+    <CspkgPartId>{5bcf81e2-b4a0-450a-ab54-a56e3347dff0}</CspkgPartId>
+    <SqlPackagePartId>{4b232cb9-cb9b-4f75-bdd8-ccb48d7f4c27}</SqlPackagePartId>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8eac7e56-c34e-407f-8ca0-fe3fa5fae134}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b232cb9-cb9b-4f75-bdd8-ccb48d7f4c27}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a544a688-da44-49ad-ac9c-0cb58c195ae5}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9e2d0fe2-990e-46e3-812b-71e79b76e316}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{1350cec4-90e5-42fb-95f4-19e029401ed5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{6fefcd11-5cfd-4358-aa6c-594aca0af610}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>
